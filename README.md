@@ -1,17 +1,23 @@
 # elasticsearch
 
-**Docker**
+## Docker
+
+**Running docker container**
 
 ```sh
 docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
 ```
 
-```sh
-docker exec -it node-app bash ==== to open container bash (-it interactive mode)
-```
+**Open bash of conatiner**
 
 ```sh
-docker rm node-app -fv (f=force, v=volume)
+docker exec -it node-app bash
+```
+
+**Delete Container**
+
+```sh
+docker rm node-app -fv
 ```
 
 ## Refrences
