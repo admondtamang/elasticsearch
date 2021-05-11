@@ -8,7 +8,7 @@
 docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
 ```
 
-**Open bash of conatiner**
+**Open Conatiner Bash or Terminal**
 
 ```sh
 docker exec -it node-app bash
@@ -20,7 +20,7 @@ docker exec -it node-app bash
 docker rm node-app -fv
 ```
 
-## Refrences
+## Other Docker Comamnds
 
 docker-compose up -d (detach)
 docker-compose down -v ===== --build (to force build) (volume)

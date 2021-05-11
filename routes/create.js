@@ -1,22 +1,8 @@
 const router = require("express").Router();
 const client = require("../elasticSearch");
+const Controllers = require("../controllers");
 
-router.post("/", async (req, res, err) => {
-    try {
-        await client.index({
-            index: "documents",
-            id: 1,
-            body: {
-                character: "FJSDKDSKL",
-                quote: "Summer is not coming.",
-            },
-        });
-    } catch (e) {
-        console.log(e);
-    }
-
-    res.send("created");
-});
+router.get("/search", Controllers.getSearchItems);
 
 router.put("/", async (req, res) => {
     try {
